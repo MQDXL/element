@@ -1,7 +1,7 @@
 @import "mixins/mixins";
 @import "common/var";
 
-@include b(switch) {
+@include b(switch) {  // 用大括号里的内容替换掉@content .el-switch{}
   display: inline-flex;
   align-items: center;
   position: relative;

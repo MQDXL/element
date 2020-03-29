@@ -11,6 +11,7 @@ function broadcast(componentName, eventName, params) {
 }
 export default {
   methods: {
+    // 遍历父组件，找到父组件的name=componentName时，触发父组件的eventName事件，params是参数
     dispatch(componentName, eventName, params) {
       var parent = this.$parent || this.$root;
       var name = parent.$options.componentName;

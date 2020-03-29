@@ -68,8 +68,25 @@
 /* BEM
  -------------------------- */
 @mixin b($block) {
+  // $namespace 是el, $block 是switch  $B 是el-switch
   $B: $namespace+'-'+$block !global;
 
+  // #{}插值语句  .#{$B} ---> .el-switch
+
+  /*
+  @mixin hover {
+    &:not([disabled]):hover {
+      @content;
+     }
+  }
+
+  .button {
+     border: 1px solid black;
+       @include hover {
+        border-width: 2px;
+    }
+  }
+  */
   .#{$B} {
     @content;
   }

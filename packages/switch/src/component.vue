@@ -103,7 +103,8 @@
       };
     },
     created() {
-      if (!~[this.activeValue, this.inactiveValue].indexOf(this.value)) {
+      if (!~[this.activeValue, this.inactiveValue].indexOf(this.value)) {// 如果存在则不添加 ~-1 ==0
+        // 自定义组件的 v-model 触发input 可以修改值
         this.$emit('input', this.inactiveValue);
       }
     },
